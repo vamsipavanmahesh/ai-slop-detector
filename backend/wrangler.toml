@@ -1,0 +1,28 @@
+name = "ai-slop-detector-backend"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[env.production]
+name = "ai-slop-detector-backend"
+
+[env.staging]
+name = "ai-slop-detector-backend-staging"
+
+[build]
+command = "npm run build"
+
+[[env.production.vars]]
+SUPABASE_URL = "your-production-supabase-url"
+SUPABASE_ANON_KEY = "your-production-supabase-anon-key"
+OPENAI_API_KEY = "your-openai-api-key"
+ANTHROPIC_API_KEY = "your-anthropic-api-key"
+JWT_SECRET = "your-jwt-secret-key"
+GOOGLE_CLIENT_ID = "your-google-oauth-client-id"
+
+[[env.staging.vars]]
+SUPABASE_URL = "your-staging-supabase-url"
+SUPABASE_ANON_KEY = "your-staging-supabase-anon-key"
+OPENAI_API_KEY = "your-openai-api-key"
+ANTHROPIC_API_KEY = "your-anthropic-api-key"
+JWT_SECRET = "your-jwt-secret-key"
+GOOGLE_CLIENT_ID = "your-google-oauth-client-id" 
