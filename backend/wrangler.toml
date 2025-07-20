@@ -1,6 +1,7 @@
 name = "ai-slop-detector-backend"
 main = "src/index.ts"
-compatibility_date = "2024-01-01"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
 
 [env.production]
 name = "ai-slop-detector-backend"
@@ -8,8 +9,8 @@ name = "ai-slop-detector-backend"
 [env.staging]
 name = "ai-slop-detector-backend-staging"
 
-[build]
-command = "npm run build"
+# Build section removed to prevent circular dependency
+# Wrangler will handle the build process automatically
 
 [[env.production.vars]]
 SUPABASE_URL = "your-production-supabase-url"
